@@ -3,7 +3,8 @@
   "version": "0.0.2",
   "scripts": {
     "build:type": "tsc --declaration --emitDeclarationOnly --outDir typings",
-    "build": "npm run build:type && vite build"
+    "build": "npm run build:type && vite build",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
