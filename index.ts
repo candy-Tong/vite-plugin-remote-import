@@ -30,9 +30,6 @@ export function remoteImport(options: Options | DepMap): Plugin {
             };
         },
         resolveId(id) {
-            if (id.includes('vue') && !id.includes('css') && !id.includes('tencent')) {
-                console.log(id, depMap[id]);
-            }
             return depMap[id];
         },
         enforce: 'pre',
