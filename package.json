@@ -1,0 +1,34 @@
+{
+  "name": "vite-plugin-remote-import",
+  "version": "0.0.1",
+  "scripts": {
+    "build:type": "tsc --declaration --emitDeclarationOnly --outDir typings",
+    "build": "npm run build:type && vite build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^3.0.5"
+  },
+  "description": "<p style=\"display:flex; justify-content: center\">",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "type": "module",
+  "typings": "typings/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/candy-Tong/vite-remote-import"
+  },
+  "keywords": [],
+  "author": "candy-Tong",
+  "license": "ISC"
+}
